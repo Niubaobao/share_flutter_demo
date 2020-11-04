@@ -1,3 +1,4 @@
+import 'package:first_demo/widgets/indexed_stack/indexed_stack.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:xhb_widget/xhb_widget.dart';
@@ -45,12 +46,18 @@ class _OtherpageState extends State<Otherpage> with AutomaticKeepAliveClientMixi
               text: '点击接收原生方法 ${str}',
             ),
           ),
+          PrimaryButton(
+            onPressed: (){
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (BuildContext context) =>IndexedStackDemo()));
+            },
+            text: 'IndexedStack',
+          ),
         ],
       )),
     );
   }
 
   @override
-  // TODO: implement wantKeepAlive
   bool get wantKeepAlive =>true;
 }
