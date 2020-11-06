@@ -2,13 +2,32 @@ import 'package:flutter/material.dart';
 //IndexedStack继承自Stack，它的作用是显示第index个child，其他child都是不可见的。所以IndexedStack的尺寸永远是跟最大的子节点尺寸一致。
 
 class IndexedStackDemo extends StatefulWidget {
+  IndexedStackDemo({Key key}) : super(key: key);
+
   @override
-  _IndexedStackDemoState createState() => _IndexedStackDemoState();
+  IndexedStackDemoState createState() => IndexedStackDemoState();
 }
 
-class _IndexedStackDemoState extends State<IndexedStackDemo> {
+class IndexedStackDemoState extends State<IndexedStackDemo>
+    with AutomaticKeepAliveClientMixin {
+  bool isActive = false;
+
+  changeState() {
+    print('通过global控制');
+    setState(() {
+      isActive = !isActive;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
+    super.build(context);
+
     return Scaffold(
       appBar: AppBar(
         title: Text('IndexedStack'),
@@ -48,7 +67,8 @@ class _IndexedStackDemoState extends State<IndexedStackDemo> {
                 bottom: 20,
                 right: 20,
                 child: Container(
-                  decoration: BoxDecoration(color: Colors.blue).copyWith(color: Colors.black87),
+                  decoration: BoxDecoration(color: Colors.blue)
+                      .copyWith(color: Colors.black87),
                   // color: Colors.yellow,
                   height: 40,
                   width: 40,
@@ -56,9 +76,19 @@ class _IndexedStackDemoState extends State<IndexedStackDemo> {
                 ),
               )
             ],
-          )
+          ),
+          Switch(
+              value: isActive,
+              onChanged: (value) {
+                setState(() {
+                  isActive = value;
+                });
+              })
         ],
       ),
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }
