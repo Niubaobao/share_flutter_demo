@@ -39,7 +39,7 @@ class _IndexedStackDemoState extends State<IndexedStackDemo> {
           Stack(
             children: [
               Container(
-                color: Colors.red,
+                color: Colors.red.withOpacity(0.3),
                 width: 200,
                 height: 200,
                 child: Text('Container内容'),
@@ -48,7 +48,8 @@ class _IndexedStackDemoState extends State<IndexedStackDemo> {
                 bottom: 20,
                 right: 20,
                 child: Container(
-                  color: Colors.yellow,
+                  decoration: BoxDecoration(color: Colors.blue).copyWith(color: Colors.black87),
+                  // color: Colors.yellow,
                   height: 40,
                   width: 40,
                   child: Text('inner'),
