@@ -8,11 +8,11 @@ class HotListData {
 
   HotListData(
       {String tmpHref,
-        String tmpTitle,
-        String tmpHot,
-        String tmpContent,
-        String tmpPicHref,
-        String tmpIndex}) {
+      String tmpTitle,
+      String tmpHot,
+      String tmpContent,
+      String tmpPicHref,
+      String tmpIndex}) {
     this._tmpHref = tmpHref;
     this._tmpTitle = tmpTitle;
     this._tmpHot = tmpHot;
@@ -44,7 +44,7 @@ class HotListData {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = Map<String, dynamic>();
     data['tmpHref'] = this._tmpHref;
     data['tmpTitle'] = this._tmpTitle;
     data['tmpHot'] = this._tmpHot;

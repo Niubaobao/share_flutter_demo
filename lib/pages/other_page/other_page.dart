@@ -14,7 +14,7 @@ class _OtherpageState extends State<Otherpage> {
   //
   GlobalKey<GlobalDemoState> _scaffoldkey = GlobalKey<GlobalDemoState>();
 
-  static const messageChannel = const BasicMessageChannel(
+  static const messageChannel = BasicMessageChannel(
     'TEST',
     StringCodec(),
   );

@@ -9,7 +9,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   final PageController _controller = PageController(
     initialPage: 0,
     keepPage: true,
@@ -26,7 +25,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void dispose() {
     super.dispose();
-    _controller.dispose();  // _controller销毁掉
+    _controller.dispose(); // _controller销毁掉
   }
 
   @override
@@ -60,7 +59,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _onItemTapped(int index) {
-    if(index ==_selectedIndex ) return ;
+    if (index == _selectedIndex) return;
 
     _controller.jumpToPage(index);
     setState(() {

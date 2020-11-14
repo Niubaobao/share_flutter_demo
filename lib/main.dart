@@ -1,8 +1,9 @@
 import 'package:first_demo/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
-
 import 'global_config.dart';
 
+/// app 入口
+///
 void main() {
   runApp(MyApp());
 }

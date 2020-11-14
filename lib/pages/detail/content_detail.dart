@@ -4,7 +4,7 @@ class ContentDetail extends StatelessWidget {
   final String tmpContent;
   final String tmpHref;
 
-  ContentDetail({this.tmpContent,  @required this.tmpHref});
+  ContentDetail({this.tmpContent, @required this.tmpHref});
 
   @override
   Widget build(BuildContext context) {
@@ -19,12 +19,12 @@ class ContentDetail extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(bottom: 30),
               child: Text(
-                tmpHref??'默认tmpHref',
+                tmpHref ?? '默认tmpHref',
                 style: TextStyle(color: Colors.blue),
               ),
             ),
             Container(
-              child: Text(tmpContent?? '默认tmpContent'),
+              child: Text(tmpContent ?? '默认tmpContent'),
             )
           ],
         ),

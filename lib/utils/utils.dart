@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 
-class Utils{
+class Utils {
   static Future<String> loadAsset(String path) async {
     return await rootBundle.loadString(path);
   }
