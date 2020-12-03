@@ -1,3 +1,4 @@
+import 'package:first_demo/pages/canvas/custom_canvas.dart';
 import 'package:first_demo/widgets/global_demo.dart';
 import 'package:first_demo/widgets/indexed_stack/indexed_stack.dart';
 import 'package:flutter/material.dart';
@@ -59,6 +60,16 @@ class _OtherpageState extends State<Otherpage> {
               );
             },
             text: 'IndexedStack',
+          ),
+          PrimaryButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => CustomCanvas(),
+                ),
+              );
+            },
+            text: '点击跳转canvas',
           ),
           Icon(
             Icons.android,
